@@ -233,6 +233,90 @@
             color: #555;
             margin-top: 40px;
         }
+        /* === BERANDA SECTION (Minimalis Elegan) === */
+        .beranda-section {
+            padding: 60px 20px;
+            background: #fafafa;
+        }
+
+        .beranda-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .beranda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Image */
+        .beranda-image img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+        }
+
+        .beranda-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Circle placeholder */
+        .circle-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 4px solid #e5e5e5;
+            margin-bottom: 20px;
+
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .circle-placeholder:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+        }
+        .circle-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            }
+
+        /* Text */
+        .beranda-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2e2e2e;
+            margin-bottom: 12px;
+        }
+
+        .beranda-text p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .beranda-bg {
+            padding: 120px 20px;
+            background: linear-gradient(140deg, 
+                #ffd6e8,  
+                #d8e9ff,  
+                #eedaff,  
+                #fff3d6   
+            );
+            background-size: 400% 400%;
+            animation: berandaGradient 14s ease infinite;
+        }
+        @keyframes berandaGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
     </style>
 </head>
 
@@ -264,6 +348,38 @@
     </ul>
 </nav>
 
+<!-- ====================== BERANDA (Minimalis Elegan) ======================= -->
+<section id="beranda" class="beranda-bg">
+    <div class="beranda-container">
+        <div class="beranda-grid">
+
+            <!-- Foto Kota Bekasi -->
+            <div class="beranda-image">
+                <img 
+                    src="https://media.istockphoto.com/id/1276789193/id/foto/landmark-kota-dari-udara.jpg?s=612x612&w=0&k=20&c=-rZn7BXBVB2B27e86gcfFSo5Cec0GJB_0nYVFqQQ9Qk=" 
+                    alt="Kota Bekasi"
+                >
+            </div>
+
+            <!-- Placeholder Bulat + Teks -->
+            <div class="beranda-text">
+                
+                <!-- Bulat Placeholder -->
+                <div class="circle-placeholder">
+                <img src="https://i.pinimg.com/736x/34/c9/9d/34c99d1264f7faad006aacfed56ae726.jpg" alt="Foto Placeholder">
+            </div>
+
+
+                <h2>Halo! Selamat Datang</h2>
+                <p>
+                    Selamat datang di <b>Planet Bekasi</b> — kota yang penuh energi, kreativitas,
+                    dan cerita unik. Yuk jelajahi informasi dan update terbaru yang kami sajikan.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- === BERITA === -->
 <section id="berita">
@@ -495,6 +611,5 @@
 <footer>
     © 2025 Bekasi Planet - Kanira Syakira Tarigan
 </footer>
-
 </body>
 </html>
